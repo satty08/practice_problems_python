@@ -1,18 +1,12 @@
-def reverseAlphabetCharsOnly(inputString: str) -> str:
-    inputChar = list(inputString)
-    right = len(inputString) - 1
-    left = 0
-    while left < right:
-        if not inputChar[left].isalpha():
-            left = left + 1
-        elif not inputChar[right].isalpha():
-            right = right - 1
-        else:
-            temp = inputChar[left]
-            inputChar[left] = inputChar[right]
-            inputChar[right] = temp
-            left = left + 1
-            right = right - 1
-    return ''.join(inputChar)
+# def star(n):
+#     for i in range(n):
+#         print(' '*(n-i-1)+'*'*(2*i+1))
+# star(9)
 
-print(reverseAlphabetCharsOnly('^a+b-a+'))
+def fib(n):
+    if n == 0:
+        print(0)
+    if n == 1:
+        print(1)
+    return fib(n-1) + fib(n-2)
+fib(4)
