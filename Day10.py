@@ -30,7 +30,3 @@ def isPermutation(x, y):
 x = 'arora'
 y = 'roara'
 print(isPermutation(x, y))
-
-'''
-
-'''
