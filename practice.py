@@ -1,7 +1,16 @@
-n = int(input())
-speed = list(map(int, input().split()))
-res = 1
-for i in range(1, n):
-    if speed[i] < speed[i-1]:
-        res += 1
-print(res)
+g = int(input())
+for i in range(g):
+    res = 0
+    i, n, q = map(int, input().split())
+    if n%2 != 0:
+        if i == 1 and q == 1:
+            res = n//2
+        elif i==1 and q == 2:
+            res = n//2 + 1
+        elif i == 2 and q == 1:
+            res = n//2 + 1
+        elif i == 2 and q == 2:
+            res = n//2
+    else:
+        res = n//2
+    print(res)
