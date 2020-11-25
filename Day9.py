@@ -1,3 +1,7 @@
+'''
+Merge Two sorted array
+'''
+
 def merge(arr1, arr2, n, m): 
     if n < m:
         for i in range(n):
