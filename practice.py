@@ -12,16 +12,19 @@
 #     i += 1
 # print(res)
 
-t = int(input())
-while t:
+# t = int(input())
+# while t:
 
-    n = int(input())
-    strength = list(map(int, input().split()))
-    count = 0
-    for i in range(n):
-        for j in range(i, n):
-            if strength[i] > 2*strength[j]:
-                count += 1
-    print(count)
-    t -= 1
+#     n = int(input())
+#     strength = list(map(int, input().split()))
+#     count = 0
+#     for i in range(n):
+#         for j in range(i, n):
+#             if strength[i] > 2*strength[j]:
+#                 count += 1
+#     print(count)
+#     t -= 1
 # 1 3 2 6 2 7 4 2 3 1
+
+import random 
+print(random.random())
