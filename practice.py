@@ -26,5 +26,9 @@
 #     t -= 1
 # 1 3 2 6 2 7 4 2 3 1
 
-import random 
-print(random.random())
+from itertools import permutations as p
+
+string = 'abcde'
+perm = p(string)
+x = list(perm)
+print(x)
