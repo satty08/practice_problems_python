@@ -26,9 +26,43 @@
 #     t -= 1
 # 1 3 2 6 2 7 4 2 3 1
 
-from itertools import permutations as p
+# t = int(input())
+# while t:
+#     x, y = map(int, input().split())
+#     if x == 1 or y == 1:
+#         res = (x+y)//2
+#         print(res)
+#     else:
+#         res = (x*y)//2
+#         print(res)
+#     t-=1
 
-string = 'abcde'
-perm = p(string)
-x = list(perm)
-print(x)
+# import math
+# n, d = map(int, input().split())
+# ages = list(map(int, input().split()))
+# risk, noRisk = 0, 0
+# for i in range(n):
+#     if ages[i] >= 80 or ages[i] <= 9:
+#         risk += 1
+#     else:
+#         noRisk += 1
+# days = math.ceil(risk/d) + math.ceil(noRisk/d)
+# print(days)
+
+def firstNotRepeatingCharacter(s):
+    res = {}
+    for i in range(len(s)):
+        if s[i] not in res:
+            res[s[i]] = 1
+        else:
+            res[s[i]] += 1
+    ans=""
+    for key in res:
+        if res[key] == 1:
+            ans = key
+            break
+    return ans
+
+s = "absbabsnsaks"
+
+print(firstNotRepeatingCharacter(s))
