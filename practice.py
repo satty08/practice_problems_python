@@ -66,3 +66,50 @@ def firstNotRepeatingCharacter(s):
 s = "absbabsnsaks"
 
 print(firstNotRepeatingCharacter(s))
+
+# res = []
+# n, k = map(int, input().split())
+# for i in range(1,n+1):
+#     res.append(str(i))
+# x = " ".join(res)
+# print(x)
+
+def isCryptSolution(crypt, solution):
+    res = {}
+    for i in range(len(solution)):
+        res[solution[i][0]] = solution[i][1]
+    x = 0
+    for i in range(len(crypt)-1):
+        a = ''
+        for j in crypt[i]:
+            if j in res:
+                a += res[j]
+        if len(crypt[i]) != len(str(int(a))):
+            return False
+        print(a)
+        x += int(a)
+    a=''
+    for j in crypt[2]:
+        if j in res:
+            a += res[j]
+    if len(crypt[2]) != len(str(int(a))):
+        return False
+    if x == int(a):
+        return True
+    else:
+        return False
+
+crypt = ["WASD", 
+ "IJKL", 
+ "AOPAS"]
+solution = [["W","2"], 
+ ["A","0"], 
+ ["S","4"], 
+ ["D","1"], 
+ ["I","5"], 
+ ["J","8"], 
+ ["K","6"], 
+ ["L","3"], 
+ ["O","7"], 
+ ["P","9"]]
+print(isCryptSolution(crypt, solution))
