@@ -67,12 +67,12 @@ s = "absbabsnsaks"
 
 print(firstNotRepeatingCharacter(s))
 
-# res = []
-# n, k = map(int, input().split())
-# for i in range(1,n+1):
-#     res.append(str(i))
-# x = " ".join(res)
-# print(x)
+res = []
+n, k = map(int, input().split())
+for i in range(1,n+1):
+    res.append(str(i))
+x = " ".join(res)
+print(x)
 
 def isCryptSolution(crypt, solution):
     res = {}
