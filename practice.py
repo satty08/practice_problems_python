@@ -49,23 +49,23 @@
 # days = math.ceil(risk/d) + math.ceil(noRisk/d)
 # print(days)
 
-def firstNotRepeatingCharacter(s):
-    res = {}
-    for i in range(len(s)):
-        if s[i] not in res:
-            res[s[i]] = 1
-        else:
-            res[s[i]] += 1
-    ans=""
-    for key in res:
-        if res[key] == 1:
-            ans = key
-            break
-    return ans
+# def firstNotRepeatingCharacter(s):
+#     res = {}
+#     for i in range(len(s)):
+#         if s[i] not in res:
+#             res[s[i]] = 1
+#         else:
+#             res[s[i]] += 1
+#     ans=""
+#     for key in res:
+#         if res[key] == 1:
+#             ans = key
+#             break
+#     return ans
 
-s = "absbabsnsaks"
+# s = "absbabsnsaks"
 
-print(firstNotRepeatingCharacter(s))
+# print(firstNotRepeatingCharacter(s))
 
 res = []
 n, k = map(int, input().split())
