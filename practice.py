@@ -67,12 +67,12 @@
 
 # print(firstNotRepeatingCharacter(s))
 
-res = []
-n, k = map(int, input().split())
-for i in range(1,n+1):
-    res.append(str(i))
-x = " ".join(res)
-print(x)
+# res = []
+# n, k = map(int, input().split())
+# for i in range(1,n+1):
+#     res.append(str(i))
+# x = " ".join(res)
+# print(x)
 
 def isCryptSolution(crypt, solution):
     res = {}
@@ -112,4 +112,17 @@ solution = [["W","2"],
  ["L","3"], 
  ["O","7"], 
  ["P","9"]]
-print(isCryptSolution(crypt, solution))
+# print(isCryptSolution(crypt, solution))
+
+def processQueries(queries, m):
+    P = [i+1 for i in range(m)]
+    res = []
+    for i in range(len(queries)):
+        n = P.index(queries[i])
+        res.append(n)
+        P.insert(0,P.pop(n))
+    return res
+
+queries=[3, 1, 2, 1]
+m = 5
+print(processQueries(queries, m))
