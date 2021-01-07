@@ -114,15 +114,15 @@ solution = [["W","2"],
  ["P","9"]]
 # print(isCryptSolution(crypt, solution))
 
-def processQueries(queries, m):
-    P = [i+1 for i in range(m)]
-    res = []
-    for i in range(len(queries)):
-        n = P.index(queries[i])
-        res.append(n)
-        P.insert(0,P.pop(n))
-    return res
+# def processQueries(queries, m):
+#     P = [i+1 for i in range(m)]
+#     res = []
+#     for i in range(len(queries)):
+#         n = P.index(queries[i])
+#         res.append(n)
+#         P.insert(0,P.pop(n))
+#     return res
 
-queries=[3, 1, 2, 1]
-m = 5
-print(processQueries(queries, m))
+# queries=[3, 1, 2, 1]
+# m = 5
+# print(processQueries(queries, m))
