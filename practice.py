@@ -67,62 +67,86 @@
 
 # print(firstNotRepeatingCharacter(s))
 
-res = []
-n, k = map(int, input().split())
-for i in range(1,n+1):
-    res.append(str(i))
-x = " ".join(res)
-print(x)
+# res = []
+# n, k = map(int, input().split())
+# for i in range(1,n+1):
+#     res.append(str(i))
+# x = " ".join(res)
+# print(x)
 
-def isCryptSolution(crypt, solution):
-    res = {}
-    for i in range(len(solution)):
-        res[solution[i][0]] = solution[i][1]
-    x = 0
-    for i in range(len(crypt)-1):
-        a = ''
-        for j in crypt[i]:
-            if j in res:
-                a += res[j]
-        if len(crypt[i]) != len(str(int(a))):
-            return False
-        print(a)
-        x += int(a)
-    a=''
-    for j in crypt[2]:
-        if j in res:
-            a += res[j]
-    if len(crypt[2]) != len(str(int(a))):
-        return False
-    if x == int(a):
-        return True
+# def isCryptSolution(crypt, solution):
+#     res = {}
+#     for i in range(len(solution)):
+#         res[solution[i][0]] = solution[i][1]
+#     x = 0
+#     for i in range(len(crypt)-1):
+#         a = ''
+#         for j in crypt[i]:
+#             if j in res:
+#                 a += res[j]
+#         if len(crypt[i]) != len(str(int(a))):
+#             return False
+#         print(a)
+#         x += int(a)
+#     a=''
+#     for j in crypt[2]:
+#         if j in res:
+#             a += res[j]
+#     if len(crypt[2]) != len(str(int(a))):
+#         return False
+#     if x == int(a):
+#         return True
+#     else:
+#         return False
+
+# crypt = ["WASD", 
+#  "IJKL", 
+#  "AOPAS"]
+# solution = [["W","2"], 
+#  ["A","0"], 
+#  ["S","4"], 
+#  ["D","1"], 
+#  ["I","5"], 
+#  ["J","8"], 
+#  ["K","6"], 
+#  ["L","3"], 
+#  ["O","7"], 
+#  ["P","9"]]
+# # print(isCryptSolution(crypt, solution))
+
+# def processQueries(queries, m):
+#     P = [i+1 for i in range(m)]
+#     res = []
+#     for i in range(len(queries)):
+#         n = P.index(queries[i])
+#         res.append(n)
+#         P.insert(0,P.pop(n))
+#     return res
+
+# queries=[3, 1, 2, 1]
+# m = 5
+# print(processQueries(queries, m))
+
+# import timeit
+# negSum = 0
+
+# for i in range(10000000):
+#     start = timeit.default_timer()
+#     negSum -= 1
+# stop = timeit.default_timer()
+
+# print(negSum)
+# print(stop-start)
+def lcs(X, Y, m, n):
+    if m == 0 or n == 0:
+        return 0
+    elif X[m-1] == Y[n-1]:
+        return 1 + lcs(X, Y, m-1, n-1)
     else:
-        return False
+        return max(lcs(X, Y, m, n-1), lcs(X, Y, m-1, n))
 
-crypt = ["WASD", 
- "IJKL", 
- "AOPAS"]
-solution = [["W","2"], 
- ["A","0"], 
- ["S","4"], 
- ["D","1"], 
- ["I","5"], 
- ["J","8"], 
- ["K","6"], 
- ["L","3"], 
- ["O","7"], 
- ["P","9"]]
-# print(isCryptSolution(crypt, solution))
-
-def processQueries(queries, m):
-    P = [i+1 for i in range(m)]
-    res = []
-    for i in range(len(queries)):
-        n = P.index(queries[i])
-        res.append(n)
-        P.insert(0,P.pop(n))
-    return res
-
-queries=[3, 1, 2, 1]
+X = 'abcda'
+Y = 'cbadca'
 m = 5
-print(processQueries(queries, m))
+n = 6
+print(lcs(X, Y, m, n))
