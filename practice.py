@@ -150,3 +150,32 @@ Y = 'cbadca'
 m = 5
 n = 6
 print(lcs(X, Y, m, n))
+
+# import math
+
+# print(math.sqrt(25))
+# print(math.pi*5*5)
+# sinefunction = math.sin(180)
+# cosinefunc = math.cos(180)
+# print(sinefunction, cosinefunc)
+
+# import random
+
+# print(random.randrange(0,5))
+# print(random.uniform(0, 1))
+# print(random.randint(0, 100))
+# List = [1, 4, True, 800, "python", 27, "hello"]
+# item = int(random.uniform(0,1)*6)
+# print(List[item])
+
+import time
+
+seconds = time.time()
+print(seconds)
+
+local_time = time.ctime(1612100010.7453306)
+print(local_time)
+
+print("This is printed immediately.")
+time.sleep(2.4)
+print("This is printed after 2.4 seconds.")
