@@ -168,14 +168,35 @@ print(lcs(X, Y, m, n))
 # item = int(random.uniform(0,1)*6)
 # print(List[item])
 
-import time
+# import time
 
-seconds = time.time()
-print(seconds)
+# seconds = time.time()
+# print(seconds)
 
-local_time = time.ctime(1612100010.7453306)
-print(local_time)
+# local_time = time.ctime(1612100010.7453306)
+# print(local_time)
 
-print("This is printed immediately.")
-time.sleep(2.4)
-print("This is printed after 2.4 seconds.")
+# print("This is printed immediately.")
+# time.sleep(2.4)
+# print("This is printed after 2.4 seconds.")
+
+# t = input()
+# res = list(t.split(' '))
+# for i in range(len(res)):
+#     print(res[i][::-1])
+    
+# def stepIncreaseList(arr, n):
+#     if n == 0:
+#         return True
+    
+#     if arr[n-1] > arr[n-2]:
+#         return stepIncreaseList(arr, n-2)
+#     else:
+#         return False
+
+# L1 = [1, 21, 8, 1, 4, 10, 8, 12]
+# print(stepIncreaseList(L1, 8))
+
+n = 11
+x = bin(n).replace('0b', '')
+print(type(x))
