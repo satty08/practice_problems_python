@@ -200,3 +200,29 @@ print(lcs(X, Y, m, n))
 n = 11
 x = bin(n).replace('0b', '')
 print(type(x))
+
+
+n = int(input())
+
+amount = list(map(int, input().split()))
+
+p = int(input())
+pairs = []
+for i in range(p):
+    arr = list(map(int, input().split()))
+    pairs.append(arr)
+
+a = []
+res = []
+a.append(pairs[0][0])
+a.append(pairs[0][1])
+for i in range(1, p):
+    if pairs[i][0] in a or pairs[i][0] in a:
+        a.append(pairs[i][0])
+        a.append(pairs[i][1])
+
+    elif pairs[i][0] not in a and pairs[i][0] not in a:
+        res.append(a)
+        a = []
+        a.append(pairs[i][0])
+        a.append(pairs[i][1])
