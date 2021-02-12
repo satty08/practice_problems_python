@@ -250,3 +250,10 @@ print(type(x))
 #         t = 1200 + res[0]*100 + res[1]
 
 # print(t)
+
+from itertools import permutations
+
+arr = [1,3,5,2]
+perm = permutations(arr, 1)
+for i in list(set(perm)):
+    print(i)
