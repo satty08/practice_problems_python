@@ -1,4 +1,6 @@
 from itertools import permutations
+from queue import PriorityQueue as q
+
 
 def xorSum(arr, n):
     perm = permutations(arr, n)
@@ -16,11 +18,11 @@ for i in range(q):
     qval.append(int(input()))
 res = {}
 for i in qval:
-    if i == 1:
-        print(sum(nval))
-
-        continue
-
     for j in range(1, i+1):
+        if j == 1:
+            res[j] = sum(nval)
+            continue
+
         res[j] = xorSum(nval, i)
+    print(res)
     print(sum(res.values()))
