@@ -1,6 +1,4 @@
 from itertools import permutations
-from queue import PriorityQueue as q
-
 
 def xorSum(arr, n):
     perm = permutations(arr, n)

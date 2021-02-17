@@ -251,9 +251,54 @@ print(type(x))
 
 # print(t)
 
-from itertools import permutations
+# from itertools import permutations
 
-arr = [1,3,5,2]
-perm = permutations(arr, 1)
-for i in list(set(perm)):
-    print(i)
+# arr = [1,3,5,2]
+# perm = permutations(arr, 1)
+# for i in list(set(perm)):
+#     print(i)
+
+# mat = [
+#     [1,1,1,0,0],
+#     [1,1,0,0,0],
+#     [0,0,0,0,0]
+# ]
+# k = 2
+# ans = {}
+# for i in range(len(mat)):
+#     ans[i] = mat[i].count(1)
+# res = []
+# while k > 0:
+#     res.append(min(ans, key=ans.get))
+#     ans.pop(min(ans, key=ans.get))
+#     k -= 1
+
+# print(res)
+
+# res = []
+# n = int(input())
+# while n>0:
+#     curr1, curr2 = list(map(str, input().split()))
+#     if curr1 == 'MainQueue':
+#         res.append(curr2)
+#     elif curr1 not in res:
+#         print('Invalid Input')
+#         continue
+#     elif curr1 in res:
+#         temp = res.index(curr1)
+#         res.insert(temp+1, curr2)
+
+#     n -= 1
+# print(res)
+
+# s = "a1b2"
+# def letterCase(s):
+#     res = set()
+#     tmp = 0
+#     curr = list(s)
+#     for i in s:
+#         if i.isalpha():
+#             tmp += 1
+#     tmp = 2**tmp
+    
+# print(letterCase(s))
