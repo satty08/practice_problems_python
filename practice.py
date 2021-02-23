@@ -303,22 +303,47 @@ print(type(x))
     
 # print(letterCase(s))
 
-def romanToInt(s):
-    d = {
-        'I': 1,
-        'V': 5,
-        'X': 10,
-        'L': 50,
-        'C': 100,
-        'D': 500,
-        'M': 1000
-    }
-    out = 0
-    for i in range(len(s)-1):
-        print(d[s[i]])
-        if d[s[i]]<d[s[i+1]]:
-            out -= d[s[i]]
-        else:
-            out += d[s[i]]
-    out+= d[s[-1]]
-    return out
+# def romanToInt(s):
+#     d = {
+#         'I': 1,
+#         'V': 5,
+#         'X': 10,
+#         'L': 50,
+#         'C': 100,
+#         'D': 500,
+#         'M': 1000
+#     }
+#     out = 0
+#     for i in range(len(s)-1):
+#         print(d[s[i]])
+#         if d[s[i]]<d[s[i+1]]:
+#             out -= d[s[i]]
+#         else:
+#             out += d[s[i]]
+#     out+= d[s[-1]]
+#     return out
+
+import math
+
+res = math.sin(math.pi/2)
+print(res)
+
+s = 'abpcplea'
+d = {}
+for i in s:
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+t = 'apple'
+flag = 0
+for i in t:
+    s = t.count(i)
+    if d[i] < s:
+        flag = 1
+        break
+
+if flag == 1:
+    print('False')
+else:
+    print(True)
