@@ -323,27 +323,44 @@ print(type(x))
 #     out+= d[s[-1]]
 #     return out
 
-import math
+# import math
 
-res = math.sin(math.pi/2)
-print(res)
+# res = math.sin(math.pi/2)
+# print(res)
 
-s = 'abpcplea'
-d = {}
-for i in s:
-    if i in d:
-        d[i] += 1
+# s = 'abpcplea'
+# d = {}
+# for i in s:
+#     if i in d:
+#         d[i] += 1
+#     else:
+#         d[i] = 1
+# t = 'apple'
+# flag = 0
+# for i in t:
+#     s = t.count(i)
+#     if d[i] < s:
+#         flag = 1
+#         break
+
+# if flag == 1:
+#     print('False')
+# else:
+#     print(True)
+
+def findUnsortedSubarray(nums):
+    x = sorted(nums)
+    start, end = len(nums), 0
+    for i in range(len(x)):
+        if x[i] != nums[i]:
+            start = min(start, i)
+            end = max(end, i)
+            print(start, end)
+                
+    if end - start > 0:
+        return end - start + 1
     else:
-        d[i] = 1
-t = 'apple'
-flag = 0
-for i in t:
-    s = t.count(i)
-    if d[i] < s:
-        flag = 1
-        break
+        return 0
 
-if flag == 1:
-    print('False')
-else:
-    print(True)
+nums = [2,6,4,8,10,9,15]
+print(findUnsortedSubarray(nums))
