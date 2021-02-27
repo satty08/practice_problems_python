@@ -364,3 +364,9 @@ def findUnsortedSubarray(nums):
 
 nums = [2,6,4,8,10,9,15]
 print(findUnsortedSubarray(nums))
+
+temp = [12,45,24,12,67,34,23,89,34,89,23,89,12,78,90,67]
+k = int(input())
+index = int(input())
+avg = (sum(temp[index-k:index]) + temp[index] + sum(temp[index+1:index+k+1]))/(2*k+1)
+print(avg)
