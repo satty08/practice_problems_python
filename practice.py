@@ -370,3 +370,20 @@ def findUnsortedSubarray(nums):
 # index = int(input())
 # avg = (sum(temp[index-k:index]) + temp[index] + sum(temp[index+1:index+k+1]))/(2*k+1)
 # print(avg)
+
+n = int(input())
+while n:
+    x = int(input())
+    flag = False
+    while x > 0:
+        for i in range(1, x+1):
+            if (i & x) == 0:
+                flag = not flag
+                break
+        x -= i
+    if flag == False:
+        print('Vaibhavi')
+    else:
+        print('Anjali')
+
+    n -= 1
