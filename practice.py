@@ -137,19 +137,19 @@
 
 # print(negSum)
 # print(stop-start)
-def lcs(X, Y, m, n):
-    if m == 0 or n == 0:
-        return 0
-    elif X[m-1] == Y[n-1]:
-        return 1 + lcs(X, Y, m-1, n-1)
-    else:
-        return max(lcs(X, Y, m, n-1), lcs(X, Y, m-1, n))
+# def lcs(X, Y, m, n):
+#     if m == 0 or n == 0:
+#         return 0
+#     elif X[m-1] == Y[n-1]:
+#         return 1 + lcs(X, Y, m-1, n-1)
+#     else:
+#         return max(lcs(X, Y, m, n-1), lcs(X, Y, m-1, n))
 
-X = 'abcda'
-Y = 'cbadca'
-m = 5
-n = 6
-print(lcs(X, Y, m, n))
+# X = 'abcda'
+# Y = 'cbadca'
+# m = 5
+# n = 6
+# print(lcs(X, Y, m, n))
 
 # import math
 
@@ -197,9 +197,9 @@ print(lcs(X, Y, m, n))
 # L1 = [1, 21, 8, 1, 4, 10, 8, 12]
 # print(stepIncreaseList(L1, 8))
 
-n = 11
-x = bin(n).replace('0b', '')
-print(type(x))
+# n = 11
+# x = bin(n).replace('0b', '')
+# print(type(x))
 
 
 # t = int(input())
@@ -371,19 +371,51 @@ def findUnsortedSubarray(nums):
 # avg = (sum(temp[index-k:index]) + temp[index] + sum(temp[index+1:index+k+1]))/(2*k+1)
 # print(avg)
 
-n = int(input())
-while n:
-    x = int(input())
-    flag = False
-    while x > 0:
-        for i in range(1, x+1):
-            if (i & x) == 0:
-                flag = not flag
-                break
-        x -= i
-    if flag == False:
-        print('Vaibhavi')
-    else:
-        print('Anjali')
+# n = int(input())
+# while n:
+#     x = int(input())
+#     flag = False
+#     while x > 0:
+#         for i in range(1, x+1):
+#             if (i & x) == 0:
+#                 flag = not flag
+#                 break
+#         x -= i
+#     if flag == False:
+#         print('Vaibhavi')
+#     else:
+#         print('Anjali')
 
-    n -= 1
+#     n -= 1
+
+class X:
+    def __init__(self, arr):
+        self.arr = arr
+
+    def insert(self,x):
+        if x not in self.arr:
+            self.arr.append(x)
+
+        return self.arr
+    
+    def delete(self,x):
+        if x in self.arr:
+            self.arr.remove(x)
+        
+        return self.arr
+
+    def find__smallest(self,k):
+        arr1 = self.arr
+        while k > 1:
+            x = min(arr1)
+            arr1.remove(x)
+            k -= 1
+
+        return min(arr1)
+
+arr = [4,5,1,7,2,9,6]
+
+x = X(arr)
+print(x.insert(21))
+print(x.delete(2))
+print(x.find__smallest(2))
