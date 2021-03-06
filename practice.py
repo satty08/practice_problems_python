@@ -421,13 +421,72 @@ print(x.delete(2))
 print(x.find__smallest(2))
 
 # DHT11 Program
-import sys
-import Adafruit_DHT
-import time
+# import sys
+# import Adafruit_DHT
+# import time
 
-while True:
+# while True:
 
-    humidity, temperature = Adafruit_DHT.read_retry(11, 4)
+#     humidity, temperature = Adafruit_DHT.read_retry(11, 4)
 
-    print('Temp: {0:0.1f} C  Humidity: {1:0.1f} %'.format(temperature, humidity))
-    time.sleep(1)
+#     print('Temp: {0:0.1f} C  Humidity: {1:0.1f} %'.format(temperature, humidity))
+#     time.sleep(1)
+
+# t = int(input())
+# while t:
+#     C = int(input())
+#     i = 1
+#     while True:
+#         if 2**i > C:
+#             break
+#         i += 1
+#     x = 2**i
+#     ans = 0
+#     for i in range(x, 1, -1):
+#         for j in range(x, i+1, -1):
+#             if i^j == C:
+#                 ans = max(ans, i*j)
+#     print(ans)
+#     t -= 1
+
+# def solve(ratings, i):
+#     b = 0
+#     for j in range(len(ratings) - i):
+#         x = sum(ratings[j:j+i])*min(ratings[j:j+i])
+#         b = max(x, b)
+#     return b
+
+# def greatestValueDays(ratings):
+#     ans = 0
+#     n = len(ratings)
+#     for i in range(1,n):
+#         ans = max(ans, solve(ratings, i))
+#         print(solve(ratings, i))
+#     return ans
+
+# ratings = [0,0,1,2,0,0]
+# print(greatestValueDays(ratings))
+
+def minimumTimeHire2021(drivers, batteries, p):
+    ans = 2**31
+    res = []
+    for i in drivers:
+        d = 10**31
+        x = 10**31
+        for j in batteries:
+            if abs(j-i) <= d and abs(j-p) < x:
+                d = abs(j-i)
+                x = j
+                print(d, x)
+        
+        ans = min(d + abs(x-p), ans)
+        res.append(ans)
+
+    print(res)
+        
+    return ans
+
+d = [20, 100]
+b = [60, 10, 40, 80]
+p = 50
+print(minimumTimeHire2021(d, b, p))
