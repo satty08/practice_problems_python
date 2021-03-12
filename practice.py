@@ -490,3 +490,24 @@ d = [20, 100]
 b = [60, 10, 40, 80]
 p = 50
 print(minimumTimeHire2021(d, b, p))
+
+
+def coinChange(coins, amount):
+    ans = 0
+    if a <= 0: return 0
+    i = len(coins)-1
+    while amount > 0 and i > -1:
+        if amount - coins[i] >= 0:
+            ans += 1
+            amount -= coins[i]
+        else:
+            i -= 1
+
+    if amount > 0:
+        return -1
+    else:
+        return ans
+
+c = [1,2,5]
+a = 11
+print(coinChange(c, a))
