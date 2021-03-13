@@ -511,3 +511,32 @@ def coinChange(coins, amount):
 c = [1,2,5]
 a = 11
 print(coinChange(c, a))
+
+def restoreString(s, indices):
+    ans = ''
+    x = min(indices)
+    i = 0
+    while i < len(indices):
+        idx = indices.index(x+i)
+        ans += s[idx]
+        i += 1
+    return ans
+
+s = "aaiougrt"
+indices = [4,0,2,6,7,3,1,5]
+print(restoreString(s, indices))
+
+def infiniteList(a):
+    ans = [[a]]
+    curr = [a]
+    i = 1
+    while i < 5:
+        x = curr[-1] + 1
+        curr.append(x)
+        ans.append(curr)
+        print(ans)
+        i += 1
+
+    return ans
+
+print(infiniteList(1))

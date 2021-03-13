@@ -19,30 +19,43 @@
 //     arr2.sort()
 // );
 
-function processReading(readings){
-    let low = Math.min()
-    let sum = 0
-    for (let i = 0; i < readings.length; i++) {
-        sum += readings[i]
-        if (low > readings[i]) {
-            low = readings[i]
-        }        
+// function processReading(readings){
+//     let low = Math.min()
+//     let sum = 0
+//     for (let i = 0; i < readings.length; i++) {
+//         sum += readings[i]
+//         if (low > readings[i]) {
+//             low = readings[i]
+//         }        
+//     }
+//     const avg = sum/readings.length
+
+//     let high = Math.max()
+//     for (let j = 0; j < readings.length; j++) {
+//         if (high < readings[j]) {
+//             high = readings[j]
+//         }        
+//     }
+
+//     const first = readings[0]
+//     const last = readings[readings.length-1]
+
+//     return {first, last, low, high, avg}
+
+// }
+
+// readings = [121, 132, 127, 124, 174, 125]
+// console.log(processReading(readings));
+
+
+function displayWordUnderscores(){
+ var elem = document.getElementById("correctGuess")
+ if(guesses.length !== 0){
+    for(var i = 0; i < guesses.length; i++){
+        elem.innerHTML = guesses[i] + ' '
     }
-    const avg = sum/readings.length
-
-    let high = Math.max()
-    for (let j = 0; j < readings.length; j++) {
-        if (high < readings[j]) {
-            high = readings[j]
-        }        
-    }
-
-    const first = readings[0]
-    const last = readings[readings.length-1]
-
-    return {first, last, low, high, avg}
-
+ }
+ else{
+     elem.innerHTML = '_'
+ }
 }
-
-readings = [121, 132, 127, 124, 174, 125]
-console.log(processReading(readings));
