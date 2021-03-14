@@ -13,20 +13,20 @@ try:
         
         st.append(p[0])
         st.append(p[1])
-        n = len(st)
-        for i in range(2, len(arr)):
+        stlen = len(st)
+        for i in range(2, n):
             while n >= 2:
-                s1 = (st[n-1][1] - st[n-2][1])/(st[n-1][0] - st[n-2][0])
-                s2 = (p[i][1]-st[n-1][1])/(p[i][0] - st[n-1][0])
+                s1 = (st[stlen-1][1] - st[stlen-2][1])/(st[stlen-1][0] - st[stlen-2][0])
+                s2 = (p[i][1]-st[stlen-1][1])/(p[i][0] - st[stlen-1][0])
                 if s1 <= s2:
                     st.pop()
-                    n -= 1
+                    stlen -= 1
 
                 else:
                     break
             st.append(p[i])
-            n += 1
-            ans = max(ans, st[n-1][0] - st[n-2][0])
+            stlen += 1
+            ans = max(ans, st[stlen-1][0] - st[stlen-2][0])
                 
         print(ans)
         

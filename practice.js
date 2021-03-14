@@ -48,14 +48,16 @@
 // console.log(processReading(readings));
 
 
-function displayWordUnderscores(){
- var elem = document.getElementById("correctGuess")
- if(guesses.length !== 0){
-    for(var i = 0; i < guesses.length; i++){
-        elem.innerHTML = guesses[i] + ' '
-    }
- }
- else{
-     elem.innerHTML = '_'
- }
-}
+// function displayWordUnderscores(){
+//  var elem = document.getElementById("correctGuess")
+//  if(guesses.length !== 0){
+//     for(var i = 0; i < guesses.length; i++){
+//         elem.innerHTML = guesses[i] + ' '
+//     }
+//  }
+//  else{
+//      elem.innerHTML = '_'
+//  }
+// }
+
+console.log(3+3+'7');

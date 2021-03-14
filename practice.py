@@ -540,3 +540,5 @@ def infiniteList(a):
     return ans
 
 print(infiniteList(1))
+
+print(sum([1,2,3,4]))
