@@ -542,3 +542,9 @@ def infiniteList(a):
 print(infiniteList(1))
 
 print(sum([1,2,3,4]))
+
+from itertools import permutations as perm
+
+x = perm([1,2,3,4], 3)
+for i in list(x):
+    print(sum(i))
