@@ -548,3 +548,19 @@ from itertools import permutations as perm
 x = perm([1,2,3,4], 3)
 for i in list(x):
     print(sum(i))
+
+
+str1 = input()
+str2 = input()
+
+if str1 == str2:
+    print(0)
+
+s = set(str1)
+print(s)
+c = 0
+for i in s:
+    if str1.count(i) != str2.count(i):
+        c += str1.count(i) - str2.count(i)
+
+print(c+1)
