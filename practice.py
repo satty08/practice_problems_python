@@ -539,10 +539,6 @@ def infiniteList(a):
 
     return ans
 
-print(infiniteList(1))
-
-print(sum([1,2,3,4]))
-
 from itertools import permutations as perm
 
 x = perm([1,2,3,4], 3)
@@ -550,17 +546,33 @@ for i in list(x):
     print(sum(i))
 
 
-str1 = input()
-str2 = input()
+# str1 = input()
+# str2 = input()
 
-if str1 == str2:
-    print(0)
+# if str1 == str2:
+#     print(0)
 
-s = set(str1)
-print(s)
-c = 0
-for i in s:
-    if str1.count(i) != str2.count(i):
-        c += str1.count(i) - str2.count(i)
+# s = set(str1)
+# print(s)
+# c = 0
+# for i in s:
+#     if str1.count(i) != str2.count(i):
+#         c += str1.count(i) - str2.count(i)
 
-print(c+1)
+# print(c+1)
+
+# def calcSum(n, size):
+#     b = 0
+#     for i in range(len(n)-size+1):
+#         b += int(n[i:i+size])
+#     return b
+# t = int(input())
+# while t:
+
+#     n = input()
+#     x = len(n)
+#     res = 0
+#     for i in range(x):
+#         res += calcSum(n, i+1)
+#     print(res)
+#     t -= 1
