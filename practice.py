@@ -576,3 +576,8 @@ for i in list(x):
 #         res += calcSum(n, i+1)
 #     print(res)
 #     t -= 1
+
+q = bin(23)
+res = q[2:]
+print(res)
+print(0**0)
