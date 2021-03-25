@@ -69,7 +69,7 @@ Given two arrays A and B of equal size, the advantage of A with respect to B is 
 Return any permutation of A that maximizes its advantage with respect to B.
 '''
 
-def advantageCount(self, A: List[int], B: List[int]) -> List[int]:
+def advantageCount(self, A, B):
     sortA = sorted(A)
     sortB = sorted(B)
         
