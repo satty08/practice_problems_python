@@ -526,18 +526,18 @@ s = "aaiougrt"
 indices = [4,0,2,6,7,3,1,5]
 print(restoreString(s, indices))
 
-def infiniteList(a):
-    ans = [[a]]
-    curr = [a]
-    i = 1
-    while i < 5:
-        x = curr[-1] + 1
-        curr.append(x)
-        ans.append(curr)
-        print(ans)
-        i += 1
+# def infiniteList(a):
+#     ans = [[a]]
+#     curr = [a]
+#     i = 1
+#     while i < 5:
+#         x = curr[-1] + 1
+#         curr.append(x)
+#         ans.append(curr)
+#         print(ans)
+#         i += 1
 
-    return ans
+#     return ans
 
 from itertools import permutations as perm
 
@@ -580,4 +580,4 @@ for i in list(x):
 q = bin(23)
 res = q[2:]
 print(res)
-print(0**0)
+print(0**0)        
