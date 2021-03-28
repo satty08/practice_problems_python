@@ -581,3 +581,37 @@ q = bin(23)
 res = q[2:]
 print(res)
 print(0**0)        
+
+# t = int(input())
+# j = 0
+# while t:
+#     n = int(input())
+#     arr = list(map(int, input().split()))
+#     res = 0
+#     for i in range(n-1):
+#         m, idx = 128, -1
+#         for k in range(i, n):
+#             if arr[k] < m:
+#                 m = arr[k]
+#                 idx = k
+                
+#         arr[i:idx+1] = reversed(arr[i:idx+1])
+#         res += idx - i + 1
+        
+#     print('Case #'+str(j+1)+': '+ str(res))
+#     j += 1
+#     t -= 1
+
+try:
+    t = int(input())
+    while t:
+        a, y, x = map(int, input().split())
+        if a >= y:
+            j = x*y
+            print(j)
+        else:
+            j = x*a+1
+            print(j)
+        t -= 1
+except:
+    pass
