@@ -602,16 +602,24 @@ print(0**0)
 #     j += 1
 #     t -= 1
 
-try:
-    t = int(input())
-    while t:
-        a, y, x = map(int, input().split())
-        if a >= y:
-            j = x*y
-            print(j)
-        else:
-            j = x*a+1
-            print(j)
-        t -= 1
-except:
-    pass
+# try:
+#     t = int(input())
+#     while t:
+#         a, y, x = map(int, input().split())
+#         if a >= y:
+#             j = x*y
+#             print(j)
+#         else:
+#             j = x*a+1
+#             print(j)
+#         t -= 1
+# except:
+#     pass
+
+from collections import Counter
+l = 'sekncenefniwnx'
+print(Counter(l))
+
+Digits = ["zero","two","four","six","eight","one","three","five","seven","nine"]
+Counters = [Counter(digit) for digit in Digits]
+print(Counters)
