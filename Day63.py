@@ -35,3 +35,5 @@ def findContentChildren(g, s):
         else:
             j += 1
     return a
+
+print((4+5)//2)
