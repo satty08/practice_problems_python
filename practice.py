@@ -624,29 +624,33 @@ Digits = ["zero","two","four","six","eight","one","three","five","seven","nine"]
 Counters = [Counter(digit) for digit in Digits]
 print(Counters)
 
-a = 1
-while a == 1:
-    n = int(input('Enter the no. to be guessed: '))
-    i = 1
-    flag = 0
-    while i <= 5:
-        num = int(input('Enter the no.'))
-        if num == n:
-            print('correct guess!!!!!')
-            flag = 1
-            break
-        elif num > n:
-            print('too big')
-        else:
-            print('too small')
-        print('Guess again:')
-        i += 1
-    if flag == 1:
-        print('You win! You took', i , 'guesses')
-    else:
-        print('Game Over. Player 1 wins. Correct answer is ', n)
+# a = 1
+# while a == 1:
+#     n = int(input('Enter the no. to be guessed: '))
+#     i = 1
+#     flag = 0
+#     while i <= 5:
+#         num = int(input('Enter the no.'))
+#         if num == n:
+#             print('correct guess!!!!!')
+#             flag = 1
+#             break
+#         elif num > n:
+#             print('too big')
+#         else:
+#             print('too small')
+#         print('Guess again:')
+#         i += 1
+#     if flag == 1:
+#         print('You win! You took', i , 'guesses')
+#     else:
+#         print('Game Over. Player 1 wins. Correct answer is ', n)
 
-    a = int(input('Enter 1 to play again. Enter 0 to quit: '))
+#     a = int(input('Enter 1 to play again. Enter 0 to quit: '))
 
-s = '1110001100001'
-print(s.count('1'))
+# s = '1110001100001'
+# print(s.count('1'))
+
+r = [1,2,3,4]
+r.insert(0, 5)
+print(r)
