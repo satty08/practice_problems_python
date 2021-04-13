@@ -24,3 +24,6 @@ class Solution:
         h = height(root)
         dfs(root, 1)
         return self.ans
+
+
+x = int(input())
