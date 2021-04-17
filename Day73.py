@@ -89,3 +89,19 @@ def buildArray(target, n):
         i += 1
             
     return res
+
+def totalMoney(n):
+    m = 1
+    res = 0
+    for i in range(1,n+1):
+        if i%7 != 0:
+            if i%7 == 1:
+                res += m
+            else: res +=  (i%7) + m-1
+        else:
+            res += 7 + m-1
+            m += 1
+        print(res)
+    return res
+
+print(totalMoney(4))
