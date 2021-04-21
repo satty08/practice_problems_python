@@ -61,3 +61,19 @@
 // }
 
 console.log(3+3+'7');
+
+arr = [
+    1,
+    2,
+    3,
+    [[[[[4]]]]],
+    [5,[6,[7,[8]]]]
+]
+
+// function flatIt(){
+//     return this.toString();
+// }
+
+// Array.prototype.flatten = flatIt;
+// console.log(arr.flatten());
+console.log(arr.toString());
