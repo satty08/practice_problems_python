@@ -37,3 +37,22 @@ def minCostClimbingStairs(self, cost):
     for i in reversed(cost):
         f1, f2 = i + min(f1, f2), f1
     return min(f1, f2)
+
+def maxSumAfterPartitioning(arr, k):
+    x = len(arr)
+    res = 0
+    while x > 0:
+        print(x-k)
+        if x-k > 0:
+            res += max(arr)*k
+            arr.remove(max(arr))
+            x -= k
+        else:
+            res += max(arr)*abs(k-x-1)
+            x -= abs(k-x)
+            
+    return res
+
+arr = [1,15,7,9,2,5,10]
+k = 3
+print(maxSumAfterPartitioning(arr, k))

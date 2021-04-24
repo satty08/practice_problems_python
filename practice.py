@@ -654,3 +654,5 @@ print(Counters)
 r = [1,2,3,4]
 r.insert(0, 5)
 print(r)
+
+print(max(r))
