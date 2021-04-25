@@ -656,3 +656,22 @@ r.insert(0, 5)
 print(r)
 
 print(max(r))
+
+def solve(s, w):
+    flag = 0
+    for i in range(len(w)):
+        
+        for j in w[i]:
+            if j not in s:
+                flag = 0
+                break
+            else:
+                flag = 1
+
+        if flag == 1:
+            break
+    return flag
+
+s = "atyabe"
+w = ['dance', 'byte']
+print(solve(s, w))
