@@ -23,3 +23,46 @@ def maxSatisfaction(satisfaction):
         res = max(res, x)
         
     return res
+
+
+
+def findWords(board, words):
+    n, m = len(board), len(board[0])
+    res = set()
+    for i in range(n):
+        for j in range(m):
+            for word in words:
+                if word in res:
+                    continue
+                if board[i][j] != word[0]:
+                    continue
+                dfs(board, word, 0, i, j, res, set())
+    
+    return list(res)
+
+def dfs(board, word, index, x, y, res, visited):
+    if index == len(word):
+        res.add(word)
+        return 
+    if not is_valid(board, x, y) or (x, y) in visited or board[x][y] != word[index]:
+        return 
+    
+    visited.add((x, y))
+    for dx, dy in {(-1, 0), (1, 0), (0, -1), (0, 1)}:
+        nx, ny = x + dx, y + dy
+        dfs(board, word, index + 1, nx, ny, res, visited)
+    visited.remove((x, y))
+
+def is_valid(board, x, y):
+    return 0 <= x < len(board) and 0 <= y < len(board[0])
+
+
+board = [
+    ['R', 'L', 'D'],
+    ['U', 'O', 'E'],
+    ['C', 'S', 'O']
+]
+words = ['CODE', 'SOLO', 'RULES', 'COOL']
+print(findWords(board, words))
+
+
