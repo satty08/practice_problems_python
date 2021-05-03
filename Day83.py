@@ -16,3 +16,9 @@ def powerfulIntegers(x, y, bound):
     res = set(res)
     
     return res
+
+someval = 'kcjnwejk3'
+x = hash(someval)
+print(unhash(x))
+
+
