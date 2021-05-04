@@ -9,3 +9,15 @@ def runningSum(nums):
         nums[i] = nums[i-1] + nums[i]
         
     return nums
+
+
+cup = [1,0,0]
+n = int(input('How many times the cups are to be swapped? '))
+for i in range(n):
+    print('What cups do you want to swap between them? ')
+    x = int(input())
+    y = int(input())
+    cup[x-1], cup[y-1] = cup[y-1], cup[x-1]
+
+x = cup.index(1)+1
+print('The cup that has the ball is: ', x)
