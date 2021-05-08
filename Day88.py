@@ -58,28 +58,28 @@ class Solution:
 
 print(9>>1)
 
-# def solve(i, j, x):
-#     res = 1
-#     i = i%x
-#     if i == 0:
-#         return 0
+def solve(i, j, x):
+    res = 1
+    i = i%x
+    if i == 0:
+        return 0
         
-#     while j > 0:
-#         if (j&1):
-#             res = (res*i)%x
-#         j = j>>1
-#         i = (i*i)%x
+    while j > 0:
+        if (j&1):
+            res = (res*i)%x
+        j = j>>1
+        i = (i*i)%x
         
-#     return res
+    return res
 
-# try:
-#     mod = 10**9+7
-#     t = int(input())
-#     while t:
-#         n = int(input())
-#         print(solve(2, n-1, mod))
-# except:
-#     pass
+try:
+    mod = 10**9+7
+    t = int(input())
+    while t:
+        n = int(input())
+        print(solve(2, n-1, mod))
+except:
+    pass
 
 
 board = ['XOX', 'XXO', 'XOO']
