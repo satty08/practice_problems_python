@@ -77,3 +77,4 @@ arr = [
 // Array.prototype.flatten = flatIt;
 // console.log(arr.flatten());
 console.log(arr.toString());
+
