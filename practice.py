@@ -675,3 +675,12 @@ def solve(s, w):
 s = "atyabe"
 w = ['dance', 'byte']
 print(solve(s, w))
+
+def mystery(a, b):
+    if a<b:
+        return b
+    else:
+        print(a, b)
+        return b + mystery(a-1, b)
+
+print(mystery(5,3))
