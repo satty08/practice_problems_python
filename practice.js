@@ -78,3 +78,5 @@ arr = [
 // console.log(arr.flatten());
 console.log(arr.toString());
 
+x = Math.random(0, 1)
+console.log(x);
