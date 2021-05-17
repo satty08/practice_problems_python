@@ -46,6 +46,6 @@ def generateMatrix(n):
         
     return ans
 
-print(generateMatrix(3))
+# print(generateMatrix(3))
 
-print(bin(177))
+# print(bin(177))
