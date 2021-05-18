@@ -49,3 +49,25 @@ def generateMatrix(n):
 # print(generateMatrix(3))
 
 # print(bin(177))
+
+w = ["xbc","pcxbcf","xb","cxbc","pcxbc"]
+res = []
+res.append(w[0])
+for i in range(1, len(w)):
+    x = 0
+    if len(w[i]) < len(res[-1]):
+        for j in w[i]:
+            if j in res[-1]:
+                x += 1
+            else:
+                x = 0
+                break
+    else:
+        for j in res[-1]:
+            if j in w[i]:
+                x += 1
+            else:
+                x = 0
+                break
+
+    print(x)
