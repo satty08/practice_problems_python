@@ -80,3 +80,21 @@ console.log(arr.toString());
 
 x = Math.random(0, 1)
 console.log(x);
+
+arr = [
+    {
+        name: 'Satyam',
+        age: 29,
+    },
+    {
+        name: 'Sahil',
+        age: 25
+    },
+    {
+        name: 'Tarun',
+        age: 29
+    }
+]
+
+const data = arr.filter(ele => ele.name === 'Satyam')
+console.log(data);
