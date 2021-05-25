@@ -684,3 +684,10 @@ def mystery(a, b):
         return b + mystery(a-1, b)
 
 print(mystery(5,3))
+
+s = 'HELLO'[::-1]
+print(s)
+
+grid = [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]
+for col in zip(grid):
+    print(col)
