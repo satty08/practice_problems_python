@@ -27,9 +27,27 @@ def evalRPN(tokens):
 token = ["4","-2","/","2","-3","-","-"]
 print(evalRPN(token))
 
-n = int(input())
-res = '1'
-print(res)
-for i in range(1, n):
-    res += '*'*i + str(i+1)
-    print(res)
+# n = int(input())
+# res = '1'
+# print(res)
+# for i in range(1, n):
+#     res += '*'*i + str(i+1)
+#     print(res)
+
+
+def equation(arr):
+    res = []
+    for i in arr:
+        X, Y = i[0], i[1]
+        count = 0
+        modArr = [1] * (X+1)
+        for j in range(2, X+1):
+            a = Y%j
+            count += modArr[a]
+            for k in range(a, X+1, j):
+                modArr[k] += 1
+        res.append(count)
+    return res
+
+arr = [[1, 7], [7, 1], [98, 98], [12, 13], [34, 33], [89, 1000]]
+print(equation(arr))
