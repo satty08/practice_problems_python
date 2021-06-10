@@ -7,27 +7,27 @@ Return the maximum area of a piece of cake after you cut at each horizontal and 
 arrays horizontalCuts and verticalCuts. Since the answer can be a huge number, return this modulo 10^9 + 7.
 '''
 
-def maxArea(h, w, horizontalCuts, verticalCuts):
-    horizontalCuts.sort()
-    verticalCuts.sort()
-    n, m = len(horizontalCuts), len(verticalCuts)
+# def maxArea(h, w, horizontalCuts, verticalCuts):
+#     horizontalCuts.sort()
+#     verticalCuts.sort()
+#     n, m = len(horizontalCuts), len(verticalCuts)
     
-    maxH = [horizontalCuts[0]]
-    maxW = [verticalCuts[0]]
+#     maxH = [horizontalCuts[0]]
+#     maxW = [verticalCuts[0]]
     
-    for i in range(1, n):
-        maxH.append(horizontalCuts[i] - horizontalCuts[i-1])
+#     for i in range(1, n):
+#         maxH.append(horizontalCuts[i] - horizontalCuts[i-1])
         
-    maxH.append(h - horizontalCuts[n-1])
+#     maxH.append(h - horizontalCuts[n-1])
     
-    for j in range(1, m):
-        maxW.append(verticalCuts[j] - verticalCuts[j-1])
+#     for j in range(1, m):
+#         maxW.append(verticalCuts[j] - verticalCuts[j-1])
         
-    maxW.append(w - verticalCuts[m-1])
+#     maxW.append(w - verticalCuts[m-1])
     
-    ans = max(maxH)*max(maxW)
+#     ans = max(maxH)*max(maxW)
     
-    return ans%(10**9+7)
+#     return ans%(10**9+7)
 
 '''
 Given n points on a 2D plane where points[i] = [xi, yi], Return the widest vertical area between two points such 
