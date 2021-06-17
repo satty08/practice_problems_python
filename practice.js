@@ -99,12 +99,12 @@ console.log(x);
 // const data = arr.filter(ele => ele.name === 'Satyam')
 // console.log(data);
 
-setTimeout(() => {
-    console.log(23);
-}, 2000);
+// setTimeout(() => {
+//     console.log(23);
+// }, 2000);
 
-console.log(12);
+// console.log(12);
 
-arr = [1,2,3]
-arr.shift()
-console.log(arr);
+// arr = [1,2,3]
+// arr.shift()
+// console.log(arr);
