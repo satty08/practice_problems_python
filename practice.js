@@ -108,3 +108,75 @@ console.log(x);
 // arr = [1,2,3]
 // arr.shift()
 // console.log(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+// Delete all the duplicate character from the string and return the new string
+
+function deleteDuplicates(str){
+    res = new Array;
+    for (let index = 0; index < str.length; index++) {
+        if(res.length == 0){
+            res.push(str[index])
+        }
+
+        else{
+            var flag = 0
+            for (let j = 0; j < res.length; j++) {
+                if(str[index] === res[j]){
+                    flag = 1;
+                    break;
+                }                
+            }
+            if(flag === 0){
+                res.push(str[index])
+            }
+        }
+        
+    }
+    var ans = '';
+    for (let index = 0; index < res.length; index++) {
+        ans += res[index];
+        
+    }
+
+    return ans;
+}
+
+console.log(deleteDuplicates('SatyAm'))
+
+
+
+// import React, {useState} from 'react';
+
+// function counter(){
+//     const[counter, setCounter] = useState(0);
+
+//     return(
+//         <div>
+//             <p>{counter}</p>
+//             <button onClick={setCounter(counter++)}>Increment</button>
+//             <button onClick={setCounter(counter--)}>Decrement</button>
+//         </div>
+//     )
+// }
+
+// export default counter;
+
+
+
+
+
+
+
+
+
